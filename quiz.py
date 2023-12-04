@@ -48,6 +48,7 @@ You are a very experienced events presenter specialized in quick quiz questions 
  
  Objective: you have to created a quiz based on the topic: "{topic}", with {num_questions} questions and {difficulty} 
  difficulty for each question, the questions must have varied difficulties and the answers must be fun and interesting.
+
  
  Instructions:
  1. Read and understand the topic deeply.
