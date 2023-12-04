@@ -72,27 +72,27 @@ def compute_score():
 
 
 def create_main_screen():
-    st.title("Quiz Game")
-    st.subheader("Quiz Game made by AI")
+    st.title("Welcome to Your Quiz! 🌟")
+    st.subheader("Begin your journey with a quiz tailored just for you, powered by AI.")
 
-    st.write("You have to insert your OpenAI API Key first")
+    st.write("Enter Your OpenAI API Key to Start 🔑")
     st.session_state["API_KEY"] = st.text_input("Enter your OpenAI API Key")
 
-    st.button("Configure Your Quiz", on_click=prepare_config_screen)
+    st.button("Set Up Your Quiz 🛠️", on_click=prepare_config_screen)
 
 
 def create_config_screen():
-    st.title("Quiz Configuration")
-    st.subheader("Here You can Customize Your Quiz To Your Liking")
-    st.session_state['num_questions'] = st.number_input("Insert the Number of questions", min_value=1, max_value=10)
+    st.title("Customize Your Quiz 🎨")
+    st.subheader("Adjust the settings to create the perfect quiz for you")
+    st.session_state['num_questions'] = st.number_input("How many questions would you like?", min_value=1, max_value=10)
     num_questions = st.session_state['num_questions']
-    st.session_state["quiz_context"] = st.text_area("Insert the topic of the quiz")
+    st.session_state["quiz_context"] = st.text_area("Choose a topic for your quiz")
     quiz_context = st.session_state["quiz_context"]
-    st.session_state["difficulty"] = st.selectbox("Select the preferred difficulty", ["Easy", "Medium", "Hard"])
+    st.session_state["difficulty"] = st.selectbox("Select Your Difficulty Level", ["Easy", "Medium", "Hard"])
     difficulty = st.session_state["difficulty"]
 
-    st.button("Start Quiz", on_click=go_to_next_question_button)
-    st.button("Back to main menu", on_click=prepare_main_screen)
+    st.button("Start the Quiz 🚀", on_click=go_to_next_question_button)
+    st.button("Go Back to Main Menu 🔄", on_click=prepare_main_screen)
 
 
 def create_score_screen(score):
