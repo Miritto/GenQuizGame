@@ -1,5 +1,3 @@
-numpy
-streamlit
 langchain
+streamlit
 openai
-IPython
